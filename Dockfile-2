@@ -1,0 +1,11 @@
+FROM my-ansible-base
+
+ENV ANSIBLE_GATHERING smart
+ENV ANSIBLE_HOST_KEY_CHECKING false
+ENV ANSIBLE_RETRY_FILES_ENABLED false
+ENV ANSIBLE_ROLES_PATH /ansible/playbooks/roles
+ENV ANSIBLE_SSH_PIPELINING True
+ENV PYTHONPATH /usr/local/bin
+ENV ANSIBLE_LIBRARY /ansible/library
+
+WORKDIR /ansible/playbooks
